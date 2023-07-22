@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            position:fixed;
+            background-color: pink;
+            
+        }
+        h1{
+            position: relative;
+            left: 500px;
+        }
+        #d1{
+            text-align: center;
+            left: 30px;
+            background-color: skyblue;
+            width: 1350px;
+            height: 600px;
+            border-radius: 50px;
+        }
+        #po{
+            position: relative;
+            left: 20px;
+            top: 20px;
+            max-width: 70px;
+        }
+        #pp{
+            max-width: 30px;
+            position: relative;
+            left: 100px;
+            top: -13px;
+        }
+        #b1{
+            height: 70px;
+            width: 70px;
+            border-radius: 100px;
+            background-color: red;
+        }
+        #b1:hover{
+            cursor: pointer;
+        }
+        #d2{
+            position: relative;
+            left: 600px;
+            top: 200px;
+            background-color: black;
+            height: 70px;
+            max-width: 70px;
+            border-radius: 100px;
+        }
+        #bb{
+            position: fixed;
+            left: 1270px;
+            top: 100px;
+            background-color: navy;
+            border-radius: 100px;
+            color: white;
+        }
+        #bb:hover{
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+    </style>
+    <title>Button Click</title>
+</head>
+<body>
+    <h1>Click the button if you can!</h1>
+    <div id="d1">
+        <p id="po">Dodges:</p> <p id="pp"></p> <button id="bb">reset</button>
+        <div id="d2">
+        <button id="b1"></button>
+        </div>
+    </div>
+    <script>
+        var k=0;
+        var bt=document.getElementById("b1");
+        var di=document.getElementById("d2");
+        bt.onclick= function(){
+            alert("You win!");
+        }
+    di.onmouseover= function(){
+    var i = Math.floor(Math.random()*1000)+1;
+    var j = Math.floor(Math.random()*450)+1;
+    d2.style.left = i+"px";
+    d2.style.top = j+"px";
+    k++;
+    document.getElementById("pp").innerHTML=k;
+}
+    document.getElementById("bb").onclick= function(){
+        document.getElementById("pp").innerHTML="";
+        k=0;
+        d2.style.left=600+"px";
+        d2.style.top=200+"px";
+    }
+    </script>
+</body>
+</html>
